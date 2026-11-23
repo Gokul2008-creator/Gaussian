@@ -48,12 +48,15 @@ for i in range(n):
         for k in range(n+1):
             a[j][k]=a[j][k]-ratio*a[i][k]
 x[n-1]=a[n-1][n]/a[n-1][n-1]
+
 for i in range(n-2,-1,-1):
+
     x[i]=a[i][n]
     for j in range(i+1,n):
         x[i]=x[i]-a[i][j]*x[j]
     x[i]=x[i]/a[i][i]
 for i in range(n):
+
     print(f"X{i} = {x[i]:.2f}",end=" ")
 
 
